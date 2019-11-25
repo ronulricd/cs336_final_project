@@ -25,6 +25,7 @@ from imitation.pytorch.model import Model
 
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+print(device)
 
 def _train(args):
     env = launch_env()
@@ -35,9 +36,7 @@ def _train(args):
     env = DtRewardWrapper(env)
     print("Initialized Wrappers")
 
-    observation_shape = (None, ) + env.observation_space.shape
-    action_shape = (None, ) + env.action_space.shape
-
+    '''
     # Create an imperfect demonstrator
     expert = PurePursuitExpert(env=env)
 
@@ -55,6 +54,7 @@ def _train(args):
             actions.append(action)
         env.reset()
     env.close()
+    '''
 
     actions = np.array(actions)
     observations = np.array(observations)
@@ -83,13 +83,15 @@ def _train(args):
         loss.backward()
         optimizer.step()
 
-        loss = loss.data[0]
+        print(obs_batch.shape)
+        #loss = loss.data[0]
+        loss = loss.item()
         avg_loss = avg_loss * 0.995 + loss * 0.005
 
         print('epoch %d, loss=%.3f' % (epoch, avg_loss))
 
         # Periodically save the trained model
-        if epoch % 200 == 0:
+        if epoch % 50 == 0:
             torch.save(model.state_dict(), 'imitation/pytorch/models/imitate.pt')
 
 
@@ -99,7 +101,7 @@ if __name__ == '__main__':
     parser.add_argument("--episodes", default=3, type=int, help="Number of epsiodes for experts")
     parser.add_argument("--steps", default=50, type=int, help="Number of steps per episode")
     parser.add_argument("--batch-size", default=32, type=int, help="Training batch size")
-    parser.add_argument("--epochs", default=1, type=int, help="Number of training epochs")
+    parser.add_argument("--epochs", default=500, type=int, help="Number of training epochs")
     parser.add_argument("--model-directory", default="models/", type=str, help="Where to save models")
 
     args = parser.parse_args()

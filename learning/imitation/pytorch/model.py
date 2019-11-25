@@ -8,16 +8,21 @@ class Model(nn.Module):
         super(Model, self).__init__()
 
         # ONLY TRU IN CASE OF DUCKIETOWN:
-        flat_size = 32 * 9 * 14
+        #flat_size = 32 * 9 * 14
+        flat_size = 768
 
-        self.lr = nn.LeakyReLU()
+        self.lr = nn.ReLU()
         self.tanh = nn.Tanh()
         self.sigm = nn.Sigmoid()
 
-        self.conv1 = nn.Conv2d(3, 32, 8, stride=2)
-        self.conv2 = nn.Conv2d(32, 32, 4, stride=2)
-        self.conv3 = nn.Conv2d(32, 32, 4, stride=2)
-        self.conv4 = nn.Conv2d(32, 32, 4, stride=1)
+        #self.conv1 = nn.Conv2d(3, 32, 8, stride=2)
+        #self.conv2 = nn.Conv2d(32, 32, 4, stride=2)
+        #self.conv3 = nn.Conv2d(32, 32, 4, stride=2)
+        #self.conv4 = nn.Conv2d(32, 32, 4, stride=1)
+        self.conv1 = nn.Conv2d(3, 32, 3, stride=2)
+        self.conv2 = nn.Conv2d(32, 32, 5, stride=2)
+        self.conv3 = nn.Conv2d(32, 32, 7, stride=2)
+        self.conv4 = nn.Conv2d(32, 32, 9, stride=1)
 
         self.bn1 = nn.BatchNorm2d(32)
         self.bn2 = nn.BatchNorm2d(32)
@@ -38,6 +43,9 @@ class Model(nn.Module):
         x = self.bn4(self.lr(self.conv4(x)))
         x = x.view(x.size(0), -1)  # flatten
         x = self.dropout(x)
+        print("=============")
+        print(x.shape)
+        print("=============")
         x = self.lr(self.lin1(x))
 
         # because we don't want our duckie to go backwards

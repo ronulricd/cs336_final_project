@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2019)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: Domingo_Final_Report.aux
+The style file: plainnat.bst
+Database file #1: references.bib
+Warning--empty institution in imitationLearning
+You've used 3 entries,
+            2773 wiz_defined-function locations,
+            611 strings with 5319 characters,
+and the built_in function-call counts, 1210 in all, are:
+= -- 104
+> -- 68
+< -- 2
++ -- 24
+- -- 21
+* -- 91
+:= -- 199
+add.period$ -- 9
+call.type$ -- 3
+change.case$ -- 17
+chr.to.int$ -- 3
+cite$ -- 7
+duplicate$ -- 51
+empty$ -- 97
+format.name$ -- 24
+if$ -- 241
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 1
+newline$ -- 23
+num.names$ -- 12
+pop$ -- 33
+preamble$ -- 1
+purify$ -- 13
+quote$ -- 0
+skip$ -- 42
+stack$ -- 0
+substring$ -- 31
+swap$ -- 2
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 33
+warning$ -- 1
+while$ -- 11
+width$ -- 0
+write$ -- 44
+(There was 1 warning)

@@ -1,0 +1,9 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Methods}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Simulation Environment}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Input Processing}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Learning}{section.2}% 5
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Collecting Demonstrations}{subsection.2.3}% 6
+\BOOKMARK [3][-]{subsubsection.2.3.2}{Supervised Training}{subsection.2.3}% 7
+\BOOKMARK [3][-]{subsubsection.2.3.3}{Active Learning}{subsection.2.3}% 8
+\BOOKMARK [1][-]{section.3}{Progress Thus Far}{}% 9

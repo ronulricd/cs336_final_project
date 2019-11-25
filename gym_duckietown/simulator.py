@@ -178,6 +178,9 @@ class Simulator(gym.Env):
         :param distortion: If true, distorts the image with fish-eye approximation
         :param randomize_maps_on_reset: If true, randomizes the map on reset (Slows down training)
         """
+        # Save the starting pose of the vehicle
+        self.starting_pose = None
+
         # first initialize the RNG
         self.seed_value = seed
         self.seed(seed=self.seed_value)
@@ -512,6 +515,8 @@ class Simulator(gym.Env):
 
         self.cur_pos = propose_pos
         self.cur_angle = propose_angle
+
+        self.starting_pose = propose_pos
 
         logger.info('Starting at %s %s' % (self.cur_pos, self.cur_angle))
 
@@ -1348,6 +1353,7 @@ class Simulator(gym.Env):
 
         d = self._compute_done_reward()
         misc['Simulator']['msg'] = d.done_why
+        misc['Simulator']['done_code'] = d.done_code
 
         return obs, d.reward, d.done, misc
 
@@ -1366,6 +1372,12 @@ class Simulator(gym.Env):
             done = True
             reward = 0
             done_code = 'max-steps-reached'
+        elif np.linalg.norm(self.starting_pose - self.cur_pos) < 0.2 and self.step_count > 100:
+            msg = 'Stopping the simulator because we have completed a lap of the track.'
+            logger.info(msg)
+            done = True
+            reward = 10000
+            done_code = 'lap-completed'
         else:
             done = False
             reward = self.compute_reward(self.cur_pos, self.cur_angle, self.speed)
