@@ -15,7 +15,7 @@ import torch
 import numpy as np
 import gym
 
-from utils.env import launch_env
+from utils.env import launch_env1
 from utils.wrappers import NormalizeWrapper, ImgWrapper, \
     DtRewardWrapper, ActionWrapper, ResizeWrapper
 from utils.teacher import PurePursuitExpert
@@ -28,7 +28,7 @@ def _enjoy():
     model = Model(action_dim=2, max_action=1.)
 
     try:
-        state_dict = torch.load('trained_models/imitate.pt', map_location=device)
+        state_dict = torch.load('./models/imitate.pt')
         model.load_state_dict(state_dict)
     except:
         print('failed to load model')
@@ -36,7 +36,7 @@ def _enjoy():
 
     model.eval().to(device)
 
-    env = launch_env()
+    env = launch_env1()
     env = ResizeWrapper(env)
     env = NormalizeWrapper(env) 
     env = ImgWrapper(env)

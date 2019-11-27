@@ -43,9 +43,6 @@ class Model(nn.Module):
         x = self.bn4(self.lr(self.conv4(x)))
         x = x.view(x.size(0), -1)  # flatten
         x = self.dropout(x)
-        print("=============")
-        print(x.shape)
-        print("=============")
         x = self.lr(self.lin1(x))
 
         # because we don't want our duckie to go backwards
