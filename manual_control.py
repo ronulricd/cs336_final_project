@@ -107,6 +107,7 @@ def update(dt, actionHistory, obsHistory, count, actions, args):
     obs, reward, done, info = env.step(action)
     print('step_count = %s, reward=%.3f' % (env.unwrapped.step_count, reward))
     obsHistory.append(obs)
+    print(obs.shape)
 
     if key_handler[key.RETURN]:
         from PIL import Image

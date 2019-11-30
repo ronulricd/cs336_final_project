@@ -28,11 +28,11 @@ def launch_env1(id=None):
     if id is None:
         # Launch the environment
         env = DuckietownEnv(
-            seed = 1,
-            map_name="loop_empty",
-            domain_rand = 1,
+            seed = 245,
+            map_name="loop_pedestrians",
+            domain_rand = False,
             distortion = False,
-            max_steps=500001, # we don't want the gym to reset itself
+            max_steps=2000, # we don't want the gym to reset itself
             camera_width=640,
             camera_height=480,
         )

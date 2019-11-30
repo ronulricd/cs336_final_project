@@ -41,7 +41,7 @@ The abstract goes here.
 Path planning is a complex yet essential aspect of autonomous driving that is required
 for vehicles to traverse the world around us. Finding paths is a complicated task that 
 involves the avoidance of both static and dynamic obstacles, all while ensuring that the
-the vehicle stays within the drivable area of the road. \par
+vehicle stays within the drivable area of the road. \par
 Imitation learning has become a popular method through which autonomous vehicles (AVs) are 
 taught to handle the world around them. Given the complexity of the self-driving task,
 traditional reinforcement learning for the self-driving problem has proven to become intractable
@@ -55,6 +55,9 @@ drive the simulated vehicle around Duckietown without colliding into obstacles b
 that the vehicle stays within the confines of the road surface, even when avoiding obstacles. \par
 For the purposes of the project, general road rules will not be considered when driving
 around the map and purely a drivable path around the road will be considered. 
+
+\section{Related Works}
+
 
 \section{Methods}
 
@@ -118,7 +121,7 @@ the laps, the obvservation state and the action taken were recorded.
 Once recorded, the network is then trained on batched samples of the recorded observations and actions.
 The loss function used was the cross entropy loss between the network action output and the 
 expert action taken at that particular observation. 
-\subsubsection{Active Learning}
+\subsubsection{Dagger Re-Training}
 After the supervised training has completed, the model is then run through the test tracks autonomously,
 where the policy is continously refined using an L2 loss function. 
 

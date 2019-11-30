@@ -1,14 +1,14 @@
 # Fdb version 3
-["bibtex Domingo_Final_Report"] 1573015368 "Domingo_Final_Report.aux" "Domingo_Final_Report.bbl" "Domingo_Final_Report" 1573015376
+["bibtex Domingo_Final_Report"] 1575139463 "Domingo_Final_Report.aux" "Domingo_Final_Report.bbl" "Domingo_Final_Report" 1575141966
   "/usr/local/texlive/2019/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "Domingo_Final_Report.aux" 1573015376 2619 708145a6f350e67803814e6420d6968d "pdflatex"
+  "Domingo_Final_Report.aux" 1575141966 2738 1b16aeefbe0c05a1acb545dd9e85b0bd "pdflatex"
   "references.bib" 1573007398 1761 89fbcfdb81c2ca8df3d18cd9a2ca79a8 ""
   (generated)
-  "Domingo_Final_Report.blg"
   "Domingo_Final_Report.bbl"
-["pdflatex"] 1573015375 "/Users/rondomingo/Documents/master1920/CS336/final_project/report/Domingo_Final_Report.tex" "/Users/rondomingo/Documents/master1920/CS336/final_project/report/Domingo_Final_Report.pdf" "Domingo_Final_Report" 1573015376
-  "/Users/rondomingo/Documents/master1920/CS336/final_project/report/Domingo_Final_Report.aux" 1573015376 2619 708145a6f350e67803814e6420d6968d ""
-  "/Users/rondomingo/Documents/master1920/CS336/final_project/report/Domingo_Final_Report.tex" 1573015375 6961 378c71200f608b52a100f5288261f2fc ""
+  "Domingo_Final_Report.blg"
+["pdflatex"] 1575141965 "/Users/rondomingo/Documents/master1920/CS336/final_project/report/Domingo_Final_Report.tex" "/Users/rondomingo/Documents/master1920/CS336/final_project/report/Domingo_Final_Report.pdf" "Domingo_Final_Report" 1575141966
+  "/Users/rondomingo/Documents/master1920/CS336/final_project/report/Domingo_Final_Report.aux" 1575141966 2738 1b16aeefbe0c05a1acb545dd9e85b0bd ""
+  "/Users/rondomingo/Documents/master1920/CS336/final_project/report/Domingo_Final_Report.tex" 1575141965 6986 51947031310eba36ef7e61a112c025c9 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2019/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1136768653 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -62,17 +62,17 @@
   "/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1557342064 3277517 23507ed665b4dd9046f0f2a94bbef2be ""
   "/usr/local/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt" 1557342086 4259635 562fc36ec496993777a6c428d8bfb811 ""
   "/usr/local/texlive/2019/texmf.cnf" 1557341546 577 d150fef99ac436ad1156e86b0892f6ef ""
-  "Domingo_Final_Report.aux" 1573015376 2619 708145a6f350e67803814e6420d6968d "pdflatex"
-  "Domingo_Final_Report.bbl" 1573015368 966 333c8f979e5227f10443f8bc19eafcc2 "bibtex Domingo_Final_Report"
-  "Domingo_Final_Report.out" 1573015376 570 ee12c2f8a1c168d820d49170cc128c1d "pdflatex"
-  "Domingo_Final_Report.tex" 1573015375 6961 378c71200f608b52a100f5288261f2fc ""
+  "Domingo_Final_Report.aux" 1575141966 2738 1b16aeefbe0c05a1acb545dd9e85b0bd "pdflatex"
+  "Domingo_Final_Report.bbl" 1575139463 966 333c8f979e5227f10443f8bc19eafcc2 "bibtex Domingo_Final_Report"
+  "Domingo_Final_Report.out" 1575141966 622 2faeb913278fb7ca5e2fc0ac9d88bbba "pdflatex"
+  "Domingo_Final_Report.tex" 1575141965 6986 51947031310eba36ef7e61a112c025c9 ""
   "IEEEtran.cls" 1291620132 201353 775b18b42342447aea341b76a89fcb61 ""
   "images/neural_net.png" 1573015281 166539 17c45e6abf05d99543e5b8d7cc0af9b7 ""
   "images/simplesim_free.png" 1572843031 593689 6675abc4327aea50931a5df28db7c441 ""
   (generated)
   "Domingo_Final_Report.out"
-  "/Users/rondomingo/Documents/master1920/CS336/final_project/report/Domingo_Final_Report.log"
   "/Users/rondomingo/Documents/master1920/CS336/final_project/report/Domingo_Final_Report.pdf"
-  "Domingo_Final_Report.pdf"
+  "/Users/rondomingo/Documents/master1920/CS336/final_project/report/Domingo_Final_Report.log"
   "Domingo_Final_Report.log"
+  "Domingo_Final_Report.pdf"
   "Domingo_Final_Report.aux"
