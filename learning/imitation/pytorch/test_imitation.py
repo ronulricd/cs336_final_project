@@ -15,7 +15,7 @@ import torch
 import numpy as np
 import gym
 
-from utils.env import launch_env1
+from utils.env import *
 from utils.wrappers import NormalizeWrapper, ImgWrapper, \
     DtRewardWrapper, ActionWrapper, ResizeWrapper
 from utils.teacher import PurePursuitExpert
@@ -23,20 +23,11 @@ from utils.teacher import PurePursuitExpert
 from imitation.pytorch.model import *
 from pyglet.window import key
 
+NUM_TESTS = 1000
+
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-def _enjoy():
-    model = Model(action_dim=2, max_action=1.)
-
-    try:
-        state_dict = torch.load('./models/imitate.pt')
-        model.load_state_dict(state_dict)
-    except:
-        print('failed to load model')
-        exit()
-
-    model.eval().to(device)
-
+def initenv1():
     env = launch_env1()
     env = ResizeWrapper(env)
     env = NormalizeWrapper(env) 
@@ -44,9 +35,41 @@ def _enjoy():
     env = ActionWrapper(env)
     env = DtRewardWrapper(env)
 
+    return env
+
+def initenv2():
+    env = launch_env2()
+    env = ResizeWrapper(env)
+    env = NormalizeWrapper(env) 
+    env = ImgWrapper(env)
+    env = ActionWrapper(env)
+    env = DtRewardWrapper(env)
+
+    return env
+
+
+def _enjoy(env, dagger=False):
+    model = Model(action_dim=2, max_action=1.)
+
+    try:
+        if dagger:
+            state_dict = torch.load('./models/dagger_imitate.pt')
+        else:
+            state_dict = torch.load('./models/imitate.pt')
+        model.load_state_dict(state_dict)
+    except:
+        print('failed to load model')
+        exit()
+
+    model.eval().to(device)
+
     obs = env.reset()
 
-    while True:
+    successes = 0
+    count = 0
+    written = False
+
+    while count < NUM_TESTS:
         obs = torch.from_numpy(obs).float().to(device).unsqueeze(0)
 
         action = model(obs)
@@ -56,18 +79,39 @@ def _enjoy():
         env.render()
 
         if done:
-            if reward < 0:
+            count += 1
+
+            if info['Simulator']['done_code'] == 'lap-completed':
+                print('*** SUCCESS ***')
+                successes += 1
+            else:
                 print('*** FAILED ***')
-                time.sleep(0.7)
-                
+
             obs = env.reset()
             env.render()
 
-def _enjoyWindow():
+        if count != 0 and count % 50 == 0 and written is False:
+            if dagger:
+                f = open("../single_test_{}_dagger.txt".format(env.map_name), "a")
+            else: 
+                f = open("../single_test_{}.txt".format(env.map_name), "a")
+            f.write("{} {}".format(env.map_name, count))
+            f.write("\n{}/{}\n\n".format(successes, NUM_TESTS))
+            f.close()
+            written = True
+        else:
+            if count % 50 != 0:
+                written = False
+
+
+def _enjoyWindow(env, dagger=False):
     model = WindowModel(action_dim=2, max_action=1.)
 
     try:
-        state_dict = torch.load('./models/windowimitate.pt')
+        if dagger:
+            state_dict = torch.load('./models/dagger_windowimitate.pt')
+        else:
+            state_dict = torch.load('./models/windowimitate.pt')
         model.load_state_dict(state_dict)
     except:
         print('failed to load model')
@@ -75,18 +119,15 @@ def _enjoyWindow():
 
     model.eval().to(device)
 
-    env = launch_env1()
-    env = ResizeWrapper(env)
-    env = NormalizeWrapper(env) 
-    env = ImgWrapper(env)
-    env = ActionWrapper(env)
-    env = DtRewardWrapper(env)
-
     obs = env.reset()
 
     obsWindow = np.zeros((12,160,120))
 
-    while True:
+    successes = 0
+    count = 0
+    written = False
+
+    while count < NUM_TESTS:
         obsWindow[:9,:,:] = obsWindow[3:,:,:]
         obsWindow[9:12,:,:] = obs
         obs = torch.from_numpy(obsWindow).float().to(device).unsqueeze(0)
@@ -98,90 +139,40 @@ def _enjoyWindow():
         env.render()
 
         if done:
-            if reward < 0:
-                print('*** FAILED ***')
-                time.sleep(0.7)
+            count += 1
                 
+            if info['Simulator']['done_code'] == 'lap-completed':
+                print('*** SUCCESS ***')
+                successes += 1
+            else:
+                print('*** FAILED ***')
+
             obs = env.reset()
             env.render()
 
-def _dagger():
-    model = Model(action_dim=2, max_action=1.)
-
-    try:
-        state_dict = torch.load('./models/imitate.pt')
-        model.load_state_dict(state_dict)
-    except:
-        print('failed to load model')
-        exit()
-
-    model.eval().to(device)
-
-    env = launch_env1()
-    # Register a keyboard handler
-
-    env = ResizeWrapper(env)
-    env = NormalizeWrapper(env) 
-    env = ImgWrapper(env)
-    env = ActionWrapper(env)
-    env = DtRewardWrapper(env)
-
-    obs = env.reset()
-    env.render()
-    key_handler = key.KeyStateHandler()
-    env.unwrapped.window.push_handlers(key_handler)
-
-    print(env.map_name)
-    raise Exception("asdfsadf")
-
-    obsHistory = []
-    actionHistory = []
-
-    while True:
-        obs = torch.from_numpy(obs).float().to(device).unsqueeze(0)
-
-        action = model(obs)
-        action = action.squeeze().data.cpu().numpy()
-
-        obs, reward, done, info = env.step(action)
-
-        print(key_handler)
-        daggerAction = np.array([0.0, 0.0])
-        if key_handler[key.UP]:
-            print("as===as=df=sad=f=asdf=sad=fs=adf")
-            daggerAction = np.array([1.00, 0.0])
-            #action = np.array([0.44, 0.0])
-        if key_handler[key.DOWN]:
-            print("as===as=df=sad=f=asdf=sad=fs=adf")
-            daggerAction = np.array([-1.00, 0])
-            #action = np.array([-0.44, 0])
-        if key_handler[key.LEFT]:
-            print("as===as=df=sad=f=asdf=sad=fs=adf")
-            daggerAction = np.array([0.35, +1])
-        if key_handler[key.RIGHT]:
-            print("as===as=df=sad=f=asdf=sad=fs=adf")
-            daggerAction = np.array([0.35, -1])
-        if key_handler[key.SPACE]:
-            obsHistoryArray = np.array(obsHistory)
-            actionHistoryArray = np.array(actionHistory)
-            np.save('./dagger/obs_{}.npy'.format(len(count)), obsHistoryArray)
-            np.save('./dagger/actions_{}.npy'.format(len(count)), actionHistoryArray)
-
-        print(daggerAction)
-        obsHistory.append(obs) 
-        actionHistory.append(daggerAction) 
-        
-        env.render()
-
-        if done:
-            if reward < 0:
-                print('*** FAILED ***')
-                time.sleep(0.7)
-                
-            obs = env.reset()
-            env.render()
+        if count != 0 and count % 50 == 0 and written is False:
+            if dagger:
+                f = open("../window_test_{}_dagger.txt".format(env.map_name), "a")
+            else: 
+                f = open("../window_test_{}.txt".format(env.map_name), "a")
+            f.write("{} {}".format(env.map_name, count))
+            f.write("\n{}/{}\n\n".format(successes, NUM_TESTS))
+            f.close()
+            written = True
+        else:
+            if count % 50 != 0:
+                written = False
 
 if __name__ == '__main__':
-    #_enjoyWindow()
-    #_enjoy()
-    _dagger()
+    env = initenv1()
+    #_enjoy(env)
+    #_enjoy(env, dagger=True)
+    _enjoyWindow(env)
+    #_enjoyWindow(env, dagger=True)
+    env.close()
+    #env = initenv2()
+    #_enjoy(env)
+    #_enjoy(env, dagger=True)
+    #_enjoyWindow(env)
+    #_enjoyWindow(env, dagger=True)
+    #env.close()
