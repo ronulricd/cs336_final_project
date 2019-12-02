@@ -4,45 +4,50 @@ The top-level auxiliary file: Domingo_Final_Report.aux
 The style file: plainnat.bst
 Database file #1: references.bib
 Warning--empty institution in imitationLearning
-You've used 3 entries,
+Warning--empty institution in lstm
+Warning--empty institution in waymo
+Warning--empty institution in humanDriving
+Warning--empty institution in agile
+Warning--empty institution in dagger
+You've used 8 entries,
             2773 wiz_defined-function locations,
-            611 strings with 5319 characters,
-and the built_in function-call counts, 1210 in all, are:
-= -- 104
-> -- 68
-< -- 2
-+ -- 24
-- -- 21
-* -- 91
-:= -- 199
-add.period$ -- 9
-call.type$ -- 3
-change.case$ -- 17
-chr.to.int$ -- 3
-cite$ -- 7
-duplicate$ -- 51
-empty$ -- 97
-format.name$ -- 24
-if$ -- 241
+            630 strings with 5891 characters,
+and the built_in function-call counts, 2660 in all, are:
+= -- 240
+> -- 129
+< -- 7
++ -- 47
+- -- 39
+* -- 179
+:= -- 453
+add.period$ -- 24
+call.type$ -- 8
+change.case$ -- 43
+chr.to.int$ -- 8
+cite$ -- 22
+duplicate$ -- 126
+empty$ -- 212
+format.name$ -- 49
+if$ -- 525
 int.to.chr$ -- 1
 int.to.str$ -- 1
 missing$ -- 1
-newline$ -- 23
-num.names$ -- 12
-pop$ -- 33
+newline$ -- 48
+num.names$ -- 32
+pop$ -- 69
 preamble$ -- 1
-purify$ -- 13
+purify$ -- 29
 quote$ -- 0
-skip$ -- 42
+skip$ -- 100
 stack$ -- 0
-substring$ -- 31
+substring$ -- 41
 swap$ -- 2
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 33
-warning$ -- 1
-while$ -- 11
+type$ -- 88
+warning$ -- 6
+while$ -- 26
 width$ -- 0
-write$ -- 44
-(There was 1 warning)
+write$ -- 104
+(There were 6 warnings)

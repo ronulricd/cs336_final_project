@@ -18,22 +18,52 @@
 \providecommand\HyField@AuxAddToCoFields[2]{}
 \citation{imitationLearning}
 \citation{gym_duckietown}
+\citation{humanDriving}
+\citation{deepImitation}
+\citation{agile}
+\citation{waymo}
+\citation{agile}
+\citation{waymo}
 \@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}{section.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {II}Related Works}{1}{section.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {III}Methods}{1}{section.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {III}Setup}{1}{section.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-A}}Simulation Environment}{1}{subsection.3.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Simulation environment screenshot.}}{1}{figure.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-B}}Input Processing}{1}{subsection.3.2}\protected@file@percent }
-\citation{deepImitation}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Simulation environment screenshot.}}{2}{figure.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Vehicle observation example.}}{2}{figure.2}\protected@file@percent }
+\newlabel{fig:obs}{{2}{2}{Vehicle observation example}{figure.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-B}}Input Processing}{2}{subsection.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-C}}Action Generation}{2}{subsection.3.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Neural Network Diagram}}{2}{figure.3}\protected@file@percent }
+\citation{dagger}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Imitation Learning}{3}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Collecting Demonstrations}{3}{subsection.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Supervised Training}{3}{subsection.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-C}}DAGGER Re-Training}{3}{subsection.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {V}Results}{3}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-A}}Supervised Training}{3}{subsection.5.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Single-frame model training loss}}{3}{figure.4}\protected@file@percent }
+\newlabel{fig:single_loss}{{4}{3}{Single-frame model training loss}{figure.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Multi-frame model training loss}}{3}{figure.5}\protected@file@percent }
+\newlabel{fig:multi_loss}{{5}{3}{Multi-frame model training loss}{figure.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-B}}DAGGER Re-training}{3}{subsection.5.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Single-frame model DAGGER re-training loss}}{3}{figure.6}\protected@file@percent }
+\newlabel{fig:dagger_single}{{6}{3}{Single-frame model DAGGER re-training loss}{figure.6}{}}
+\citation{lstm}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Multi-frame model DAGGER re-training loss}}{4}{figure.7}\protected@file@percent }
+\newlabel{fig:dagger_multi}{{7}{4}{Multi-frame model DAGGER re-training loss}{figure.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-C}}Testing}{4}{subsection.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {V-C}1}Single-Frame Model}{4}{subsubsection.5.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {V-C}2}Multi-Frame Model}{4}{subsubsection.5.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Discussion}{4}{section.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {VII}Conclusion}{4}{section.7}\protected@file@percent }
+\newlabel{sec:conclusion}{{VII}{4}{Conclusion}{section.7}{}}
 \bibstyle{plainnat}
 \bibdata{references}
 \bibcite{imitationLearning}{{1}{2018}{{Alexandre~Attia}}{{}}}
-\bibcite{gym_duckietown}{{2}{2018}{{Chevalier-Boisvert et~al.}}{{Chevalier-Boisvert, Golemo, Cao, Mehta, and Paull}}}
-\bibcite{deepImitation}{{3}{2018}{{Hussein}}{{}}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Neural Network Diagram}}{2}{figure.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-C}}Learning}{2}{subsection.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {III-C}1}Collecting Demonstrations}{2}{subsubsection.3.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {III-C}2}Supervised Training}{2}{subsubsection.3.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {III-C}3}Dagger Re-Training}{2}{subsubsection.3.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {IV}Progress Thus Far}{2}{section.4}\protected@file@percent }
-\newlabel{sec:conclusion}{{IV}{2}{Progress Thus Far}{section.4}{}}
+\bibcite{lstm}{{2}{2019}{{Bai}}{{}}}
+\bibcite{waymo}{{3}{2018}{{Bansal}}{{}}}
+\bibcite{gym_duckietown}{{4}{2018}{{Chevalier-Boisvert et~al.}}{{Chevalier-Boisvert, Golemo, Cao, Mehta, and Paull}}}
+\bibcite{humanDriving}{{5}{2017}{{Eike~Rehder and Stiller}}{{}}}
+\bibcite{deepImitation}{{6}{2018}{{Hussein}}{{}}}
+\bibcite{agile}{{7}{2019}{{Pan}}{{}}}
+\bibcite{dagger}{{8}{2011}{{Ross}}{{}}}

@@ -1,10 +1,18 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
 \BOOKMARK [1][-]{section.2}{Related Works}{}% 2
-\BOOKMARK [1][-]{section.3}{Methods}{}% 3
+\BOOKMARK [1][-]{section.3}{Setup}{}% 3
 \BOOKMARK [2][-]{subsection.3.1}{Simulation Environment}{section.3}% 4
 \BOOKMARK [2][-]{subsection.3.2}{Input Processing}{section.3}% 5
-\BOOKMARK [2][-]{subsection.3.3}{Learning}{section.3}% 6
-\BOOKMARK [3][-]{subsubsection.3.3.1}{Collecting Demonstrations}{subsection.3.3}% 7
-\BOOKMARK [3][-]{subsubsection.3.3.2}{Supervised Training}{subsection.3.3}% 8
-\BOOKMARK [3][-]{subsubsection.3.3.3}{Dagger Re-Training}{subsection.3.3}% 9
-\BOOKMARK [1][-]{section.4}{Progress Thus Far}{}% 10
+\BOOKMARK [2][-]{subsection.3.3}{Action Generation}{section.3}% 6
+\BOOKMARK [1][-]{section.4}{Imitation Learning}{}% 7
+\BOOKMARK [2][-]{subsection.4.1}{Collecting Demonstrations}{section.4}% 8
+\BOOKMARK [2][-]{subsection.4.2}{Supervised Training}{section.4}% 9
+\BOOKMARK [2][-]{subsection.4.3}{DAGGER Re-Training}{section.4}% 10
+\BOOKMARK [1][-]{section.5}{Results}{}% 11
+\BOOKMARK [2][-]{subsection.5.1}{Supervised Training}{section.5}% 12
+\BOOKMARK [2][-]{subsection.5.2}{DAGGER Re-training}{section.5}% 13
+\BOOKMARK [2][-]{subsection.5.3}{Testing}{section.5}% 14
+\BOOKMARK [3][-]{subsubsection.5.3.1}{Single-Frame Model}{subsection.5.3}% 15
+\BOOKMARK [3][-]{subsubsection.5.3.2}{Multi-Frame Model}{subsection.5.3}% 16
+\BOOKMARK [1][-]{section.6}{Discussion}{}% 17
+\BOOKMARK [1][-]{section.7}{Conclusion}{}% 18

@@ -1,0 +1,60 @@
+loop_dyn_duckiebots 50
+0/1000
+
+loop_dyn_duckiebots 100
+0/1000
+
+loop_dyn_duckiebots 150
+0/1000
+
+loop_dyn_duckiebots 200
+0/1000
+
+loop_dyn_duckiebots 250
+0/1000
+
+loop_dyn_duckiebots 300
+0/1000
+
+loop_dyn_duckiebots 350
+0/1000
+
+loop_dyn_duckiebots 400
+0/1000
+
+loop_dyn_duckiebots 450
+0/1000
+
+loop_dyn_duckiebots 500
+0/1000
+
+loop_dyn_duckiebots 550
+0/1000
+
+loop_dyn_duckiebots 600
+0/1000
+
+loop_dyn_duckiebots 650
+0/1000
+
+loop_dyn_duckiebots 700
+0/1000
+
+loop_dyn_duckiebots 750
+0/1000
+
+loop_dyn_duckiebots 800
+0/1000
+
+loop_dyn_duckiebots 850
+0/1000
+
+loop_dyn_duckiebots 900
+0/1000
+
+loop_dyn_duckiebots 950
+0/1000
+
+loop_dyn_duckiebots 1000
+0/1000
+

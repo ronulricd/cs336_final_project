@@ -1,4 +1,4 @@
-\begin{thebibliography}{3}
+\begin{thebibliography}{8}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -10,6 +10,18 @@ Sharone~Dayan Alexandre~Attia.
 \newblock Global overview of imitation learning.
 \newblock Technical report, 2018.
 
+\bibitem[Bai(2019)]{lstm}
+Zhengwei Bai.
+\newblock Deep learning based motion planning for autonomous vehicle using
+  spatiotemporal lstm network.
+\newblock Technical report, 2019.
+
+\bibitem[Bansal(2018)]{waymo}
+Mayank Bansal.
+\newblock Chauffeurnet: Learning to drive by imitating the best and
+  synthesizing the worst.
+\newblock Technical report, 2018.
+
 \bibitem[Chevalier-Boisvert et~al.(2018)Chevalier-Boisvert, Golemo, Cao, Mehta,
   and Paull]{gym_duckietown}
 Maxime Chevalier-Boisvert, Florian Golemo, Yanjun Cao, Bhairav Mehta, and Liam
@@ -17,10 +29,27 @@ Maxime Chevalier-Boisvert, Florian Golemo, Yanjun Cao, Bhairav Mehta, and Liam
 \newblock Duckietown environments for openai gym.
 \newblock \url{https://github.com/duckietown/gym-duckietown}, 2018.
 
+\bibitem[Eike~Rehder and Stiller(2017)]{humanDriving}
+Jannik~Quehl Eike~Rehder and Christoph Stiller.
+\newblock Driving like a human: Imitation learning for path planning using
+  convolutional neural networks.
+\newblock Technical report, 2017.
+
 \bibitem[Hussein(2018)]{deepImitation}
 Ahmed Hussein.
 \newblock Deep imitation learning for 3d navigation tasks.
 \newblock \emph{Neural Computing \& Applications}, 29\penalty0 (7):\penalty0
   389--404, 2018.
+
+\bibitem[Pan(2019)]{agile}
+Yunpeng Pan.
+\newblock Agile autonomous driving using end-to-end deep imitation learning.
+\newblock Technical report, 2019.
+
+\bibitem[Ross(2011)]{dagger}
+Stéphane Ross.
+\newblock A reduction of imitation learning and structured prediction to
+  no-regret online learning.
+\newblock Technical report, 2011.
 
 \end{thebibliography}

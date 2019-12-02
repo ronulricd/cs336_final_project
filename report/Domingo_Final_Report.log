@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  30 NOV 2019 11:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  1 DEC 2019 17:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -329,30 +329,89 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ** ATTENTION: \authorblockA is deprecated (line 33). Use \IEEEauthorblockA instead.
 ** ATTENTION: \authorblockN is deprecated (line 33). Use \IEEEauthorblockN instead.
 ** ATTENTION: \authorblockA is deprecated (line 33). Use \IEEEauthorblockA instead.
-<images/simplesim_free.png, id=46, 803.0pt x 602.25pt>
+<images/simplesim_free.png, id=84, 803.0pt x 602.25pt>
 File: images/simplesim_free.png Graphic file (type png)
 <use images/simplesim_free.png>
-Package pdftex.def Info: images/simplesim_free.png  used on input line 71.
+Package pdftex.def Info: images/simplesim_free.png  used on input line 99.
 (pdftex.def)             Requested size: 200.74951pt x 150.56212pt.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 94.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 94.
-[1{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+]
+<images/first_person.png, id=101, 803.0pt x 599.23875pt>
+File: images/first_person.png Graphic file (type png)
+<use images/first_person.png>
+Package pdftex.def Info: images/first_person.png  used on input line 106.
+(pdftex.def)             Requested size: 200.74951pt x 149.80931pt.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 134.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 134.
+<images/neural_net.png, id=103, 1151.30125pt x 655.44875pt>
+File: images/neural_net.png Graphic file (type png)
+<use images/neural_net.png>
+Package pdftex.def Info: images/neural_net.png  used on input line 144.
+(pdftex.def)             Requested size: 230.25616pt x 131.08742pt.
+ [2pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.96   \item C
-              onvolutional Block </Users/rondomingo/Documents/master1920/CS336/final_project/report/images/simplesim_free.png (PNG copy)>]
-<images/neural_net.png, id=60, 1151.30125pt x 655.44875pt>
-File: images/neural_net.png Graphic file (type png)
-<use images/neural_net.png>
-Package pdftex.def Info: images/neural_net.png  used on input line 104.
-(pdftex.def)             Requested size: 230.25616pt x 131.08742pt.
- (/Users/rondomingo/Documents/master1920/CS336/final_project/report/Domingo_Final_Report.bbl)
+l.164 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.164 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.164 
+       </Users/rondomingo/Documents/master1920/CS336/final_project/report/images/simplesim_free.png (PNG copy)> </Users/rondomingo/Documents/master1920/CS336/final_project/report/images/first_person.png> </Users/rondomingo/Documents/master1920/CS336/final_project/report/images/neural_net.png>]
+<images/single_loss.png, id=117, 462.528pt x 346.896pt>
+File: images/single_loss.png Graphic file (type png)
+<use images/single_loss.png>
+Package pdftex.def Info: images/single_loss.png  used on input line 202.
+(pdftex.def)             Requested size: 129.50694pt x 97.1302pt.
+<images/window_loss.png, id=118, 462.528pt x 346.896pt>
+File: images/window_loss.png Graphic file (type png)
+<use images/window_loss.png>
+Package pdftex.def Info: images/window_loss.png  used on input line 208.
+(pdftex.def)             Requested size: 129.50694pt x 97.1302pt.
+<images/single_dagger.png, id=120, 462.528pt x 346.896pt>
+File: images/single_dagger.png Graphic file (type png)
+<use images/single_dagger.png>
+Package pdftex.def Info: images/single_dagger.png  used on input line 219.
+(pdftex.def)             Requested size: 129.50694pt x 97.1302pt.
+<images/multi_dagger.png, id=122, 462.528pt x 346.896pt>
+File: images/multi_dagger.png Graphic file (type png)
+<use images/multi_dagger.png>
+Package pdftex.def Info: images/multi_dagger.png  used on input line 228.
+(pdftex.def)             Requested size: 129.50694pt x 97.1302pt.
+ [3pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.232 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.232 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.232 
+       </Users/rondomingo/Documents/master1920/CS336/final_project/report/images/single_loss.png> </Users/rondomingo/Documents/master1920/CS336/final_project/report/images/window_loss.png> </Users/rondomingo/Documents/master1920/CS336/final_project/report/images/single_dagger.png>] [4pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.307 
+       </Users/rondomingo/Documents/master1920/CS336/final_project/report/images/multi_dagger.png>] (/Users/rondomingo/Documents/master1920/CS336/final_project/report/Domingo_Final_Report.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -364,34 +423,31 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 142.
-[2pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 313.
+[5
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.142 \end{document}
-                     </Users/rondomingo/Documents/master1920/CS336/final_project/report/images/neural_net.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 142.
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 313.
  (/Users/rondomingo/Documents/master1920/CS336/final_project/report/Domingo_Final_Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 142.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 142.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 313.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 313.
 Package rerunfilecheck Info: File `Domingo_Final_Report.out' has not changed.
-(rerunfilecheck)             Checksum: 2FAEB913278FB7CA5E2FC0AC9D88BBBA;622.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 142.
+(rerunfilecheck)             Checksum: 46CC059890D11A62469AA0293EF62F17;1084.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 313.
  ) 
 Here is how much of TeX's memory you used:
- 6197 strings out of 492616
- 96146 string characters out of 6129482
- 192976 words of memory out of 5000000
- 10067 multiletter control sequences out of 15000+600000
+ 6272 strings out of 492616
+ 97394 string characters out of 6129482
+ 195380 words of memory out of 5000000
+ 10116 multiletter control sequences out of 15000+600000
  33007 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 28i,8n,28p,289b,387s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 28i,8n,28p,289b,311s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on /Users/rondomingo/Documents/master1920/CS336/final_project/report/Domingo_Final_Report.pdf (2 pages, 745387 bytes).
+Output written on /Users/rondomingo/Documents/master1920/CS336/final_project/report/Domingo_Final_Report.pdf (5 pages, 1892599 bytes).
 PDF statistics:
- 98 PDF objects out of 1000 (max. 8388607)
- 85 compressed objects within 1 object stream
- 19 named destinations out of 1000 (max. 500000)
- 91 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 180 PDF objects out of 1000 (max. 8388607)
+ 153 compressed objects within 2 object streams
+ 40 named destinations out of 1000 (max. 500000)
+ 180 words of extra memory for PDF output out of 10000 (max. 10000000)
 

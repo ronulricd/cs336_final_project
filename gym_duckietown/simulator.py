@@ -178,6 +178,7 @@ class Simulator(gym.Env):
         :param distortion: If true, distorts the image with fish-eye approximation
         :param randomize_maps_on_reset: If true, randomizes the map on reset (Slows down training)
         """
+        self.distance_traveled = 0
         # Save the starting pose of the vehicle
         self.starting_pose = None
 
@@ -352,6 +353,7 @@ class Simulator(gym.Env):
         # Step count since episode start
         self.step_count = 0
         self.timestamp = 0.0
+        self.distance_traveled = 0
 
         # Robot's current speed
         self.speed = 0
@@ -466,6 +468,8 @@ class Simulator(gym.Env):
                 tile_idx = self.np_random.randint(0, len(self.drivable_tiles))
                 tile = self.drivable_tiles[tile_idx]
 
+        print(len(self.drivable_tiles))
+        print(tile_idx)
         # Keep trying to find a valid spawn position on this tile
 
 
@@ -537,7 +541,7 @@ class Simulator(gym.Env):
         # Get the full map file path
         self.map_file_path = get_file_path('maps', map_name, 'yaml')
 
-        logger.debug('loading map file "%s"' % self.map_file_path)
+        #logger.debug('loading map file "%s"' % self.map_file_path)
 
         with open(self.map_file_path, 'r') as f:
             self.map_data = yaml.load(f, Loader=yaml.Loader)
@@ -1205,11 +1209,11 @@ class Simulator(gym.Env):
 
         if not res:
             logger.debug(f'Invalid pose. Collision free: {no_collision} On drivable area: {all_drivable}')
-            logger.debug(f'safety_factor: {safety_factor}')
-            logger.debug(f'pos: {pos}')
-            logger.debug(f'l_pos: {l_pos}')
-            logger.debug(f'r_pos: {r_pos}')
-            logger.debug(f'f_pos: {f_pos}')
+            #logger.debug(f'safety_factor: {safety_factor}')
+            #logger.debug(f'pos: {pos}')
+            #logger.debug(f'l_pos: {l_pos}')
+            #logger.debug(f'r_pos: {r_pos}')
+            #logger.debug(f'f_pos: {f_pos}')
 
         return res
 
@@ -1232,6 +1236,7 @@ class Simulator(gym.Env):
 
         # Compute the robot's speed
         delta_pos = self.cur_pos - prev_pos
+        self.distance_traveled += np.linalg.norm(delta_pos)
         self.speed = np.linalg.norm(delta_pos) / delta_time
 
         # Update world objects
@@ -1372,12 +1377,20 @@ class Simulator(gym.Env):
             done = True
             reward = 0
             done_code = 'max-steps-reached'
-        elif np.linalg.norm(self.starting_pose - self.cur_pos) < 0.2 and self.step_count > 100:
+        elif np.linalg.norm(self.starting_pose - self.cur_pos) < 0.3 and self.step_count > 100 and self.distance_traveled > 4:
+            print(self.distance_traveled)
             msg = 'Stopping the simulator because we have completed a lap of the track.'
             logger.info(msg)
             done = True
             reward = 10000
             done_code = 'lap-completed'
+        elif self.step_count > 200 and self.distance_traveled < 1.2:
+            print(self.distance_traveled)
+            msg = 'Stopping the simulator because we have a stuck vehicle.'
+            logger.info(msg)
+            done = True
+            reward = 0
+            done_code = 'stuck-vehicle'
         else:
             done = False
             reward = self.compute_reward(self.cur_pos, self.cur_angle, self.speed)
@@ -1426,7 +1439,7 @@ class Simulator(gym.Env):
         # Note: we add a bit of noise to the camera position for data augmentation
         pos = self.cur_pos
         angle = self.cur_angle
-        logger.info('Pos: %s angle %s' % (self.cur_pos, self.cur_angle))
+        #logger.info('Pos: %s angle %s' % (self.cur_pos, self.cur_angle))
         if self.domain_rand:
             pos = pos + self.randomization_settings['camera_noise']
             
